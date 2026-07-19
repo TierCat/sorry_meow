@@ -442,7 +442,7 @@ button:active{
 
 .end-card h1{
     color:#D978A4;
-    font-size:38px;
+    font-size:30px;
     margin:12px 0;
 }
 
@@ -550,7 +550,7 @@ button:active{
         margin-right:0;
     }
     .letter-paper{ padding:36px 25px; }
-    .end-card h1{ font-size:30px; }
+    .end-card h1{ font-size:20px; }
 }
 
 @media (prefers-reduced-motion:reduce){
