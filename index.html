@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knock Knock</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mali:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="heartRain" class="heart-rain" aria-hidden="true"></div>
+    <div id="cursorTrail" aria-hidden="true"></div>
+
+    <!-- ซีน 1 : หน้าเปิด -->
+    <section id="doorScene" class="scene center">
+        <h1 class="title emoji-title">🥺👉👈</h1>
+        <h1 class="title">งอนหนูหรอคะ</h1>
+
+        <div class="door-frame">
+            <div id="door">
+                <div class="door-window"></div>
+                <div class="door-line line1"></div>
+                <div class="door-line line2"></div>
+                <div class="door-line line3"></div>
+                <div class="knob"></div>
+            </div>
+        </div>
+
+        <p class="hint">เคาะประตูสองครั้งเพื่อเข้าไปข้างใน !!</p>
+    </section>
+
+    <!-- ซีน 2 : ถามว่างอนหรือเปล่า -->
+    <main id="mainContent" class="hidden">
+        <section id="apologyHero" class="scene center">
+            <div class="card">
+                <div class="cat-stage">
+                    <img id="catImage" src="cat1.png" class="cat-image" alt="แมว">
+                </div>
+
+                <h1 id="mainQuestion" class="question">งอนอยู่หรองับ</h1>
+                <p id="subQuestion" class="sub-question hidden">เค้าขอโทษได้มุ้ยย</p>
+
+                <div id="firstButtons" class="buttons">
+                    <button id="yesBtn" class="primary-btn">ใช่</button>
+                    <button id="notAngryBtn" class="secondary-btn">ไม่ใช่</button>
+                </div>
+
+                <div id="apologyButtons" class="buttons hidden">
+                    <button id="acceptBtn" class="primary-btn">รับคำขอโทษ</button>
+                    <button id="rejectBtn" class="secondary-btn">ไม่รับ</button>
+                </div>
+
+                <button id="exitBtn" class="exit-btn hidden">ออก</button>
+            </div>
+
+            <div id="scrollCue" class="scroll-cue hidden">
+                <span>เลื่อนลงมาหน่อยน้า</span>
+                <span class="scroll-arrow">↓</span>
+            </div>
+        </section>
+
+        <!-- จดหมายขอโทษ -->
+        <section id="letterSection" class="letter-section hidden">
+            <div class="timeline-line" aria-hidden="true"></div>
+
+            <article class="letter-paper reveal">
+                <span class="tape tape-left"></span>
+                <p class="eyebrow">คำขอโทษของเค้า ♡</p>
+                <h2>เค้าขอโทษจริง ๆ นะ</h2>
+                <p>
+                    เค้ารู้ว่าสิ่งที่เค้าทำอาจทำให้เธอรู้สึกไม่ดี
+                    เค้าไม่ได้อยากให้เธอต้องเสียใจเลย
+                </p>
+            </article>
+
+            <figure class="polaroid polaroid-left reveal">
+                <img src="1.jpg" alt="รูปความทรงจำ 1">
+                <figcaption>ขอบคุณสำหรับทุกช่วงเวลาดี ๆ ♡</figcaption>
+            </figure>
+
+            <article class="letter-paper reveal">
+                <span class="tape tape-right"></span>
+                <h2>ต่อไปนี้เค้าจะใส่ใจมากขึ้น</h2>
+                <p>
+                    เค้าจะระวังคำพูดและการกระทำให้มากกว่าเดิม
+                    และจะไม่ทำให้เรื่องเดิม ๆ กลับมาทำให้เธอเสียใจอีก
+                </p>
+            </article>
+
+            <figure class="polaroid polaroid-right reveal">
+                <img src="2.jpg" alt="รูปความทรงจำ 2">
+                <figcaption>อยากมีรอยยิ้มแบบนี้ไปอีกนาน ๆ</figcaption>
+            </figure>
+
+            <article class="letter-paper final-letter reveal">
+                <p class="eyebrow">ถ้าอ่านมาถึงตรงนี้...</p>
+                <h2>หายงอนได้แล้วน้า</h2>
+                <p>
+                    เค้าตั้งใจมาง้อจริง ๆ และสัญญาว่าจะพยายามทำให้ดีกว่าเดิมนะ
+                </p>
+            </article>
+
+            <button id="backToTopBtn" class="back-top-btn reveal">
+                กลับไปข้างบนกัน
+                <span>↑</span>
+            </button>
+        </section>
+    </main>
+
+    <section id="endScene" class="end-scene hidden">
+        <div class="end-card">
+            <div class="end-heart">♡</div>
+            <h1>ขอบคุณที่รับฟังเค้านะ</h1>
+            <p>ดีกันแล้วน้าาา</p>
+        </div>
+    </section>
+
+    <!-- YouTube Player ซ่อนไว้ ใช้สำหรับเล่นเพลง -->
+<div id="youtubePlayer"></div>
+
+<!-- ปุ่มเปิด / ปิดเสียง -->
+<button id="musicToggle">🔊</button>
+
+<script src="https://www.youtube.com/iframe_api"></script>
+<script src="script.js"></script>
+
+   
+    
+</body>
+</html>
